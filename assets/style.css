@@ -1,7 +1,63 @@
-body {
+body, main {
     padding: 0;
     margin: 0;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     font: 30px Century Gothic, Arial;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 100;
+    color: #111;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #222;
+}
+
+.squares {
+    width: 200px;
+    height: 200px;
+    border: 1px solid transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+
+    transition: top 0.3s, width 0.3s, height 0.3s;
+}
+
+.squares:hover {
+    cursor: pointer;
+    top: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+#square-out {
+    z-index: 0;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 200px;
+    height: 200px;
+    background-color: #8b008b;
+}
+
+#square-in {
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    height: 200px;
+    background-color: #008b8b;
 }
